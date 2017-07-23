@@ -11,7 +11,6 @@
             <div class="panel-heading">
                 Products
             </div>
-
             <div class="panel-body">
                 <table class="table table-striped task-table">
 
@@ -20,18 +19,19 @@
                     <th>Product Photo</th>
                     <th>Product Name <br>(Chinese/English) </th>
                     <th>Category</th>
-{{--                    <th>Product Price</th>
+                    <th>Product Price</th>
                     <th>For Ages</th>
                     <th>Product Description</th>
                     <th>Specification</th>
                     <th>Precautions</th>
                     <th>Ingredients</th>
-                    <th>Instructions</th>--}}
+                    <th>Instructions</th>
                     </thead>
 
                     <!-- Table Body -->
                     <tbody>
                     @foreach ($products as $product)
+
                         <tr>
                             <!-- Task Name -->
                             <td class="table-text">
@@ -41,12 +41,12 @@
 
                             <td class="table-text">
                                 <div>{{ $product->name }}</div>
-                                <div>{{ $product->name }}</div>
+                                <div>{{ $product->english_name }}</div>
                             </td>
                             <td class="table-text">
-                                <div>{{ $product->category->name }}</div>
+                                <div>{{ $product->category['name'] }}</div>
                             </td>
-{{--
+
                             <td class="table-text">
                                 <div>{{ $product->price }}</div>
                             </td>
@@ -70,7 +70,7 @@
                             <td class="table-text">
                                 <div>{{ $product->instructions }}</div>
                             </td>
---}}
+
 
 
                             <td>

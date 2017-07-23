@@ -11,19 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')
+Route::get('/', 'ProductController@ListProducts')->name('products');
+//Route::get('/home', 'HomeController@index')->name('home')
 
-;
 Route::get('/products', 'ProductController@ListProducts')->name('products');
 
-
-
-Route::get('foo', function () {
-    return 'Hello World';
-});
+Route::resource('/product-request', 'ProductRequestController');
