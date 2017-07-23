@@ -13,11 +13,21 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'photo',
-        'category', 'brand', 'ages',
-        'specification', 'english_name', 'precautions',
-        'instructions', 'ingredients', 'photo_url',
-        'page_url','price',
+        'id',
+        'photo',
+        'name',
+        'category_id',
+        'description',
+        'price',
+        'brand_id',
+        'ages',
+        'specification',
+        'english_name',
+        'precautions',
+        'instructions',
+        'ingredients',
+        'photo_url',
+        'page_url',
     ];
 
     public function category()
@@ -28,6 +38,27 @@ class Product extends Model
     public function brand()
     {
         return $this->belongsTo('App\Brand');
+    }
+
+    public static function getRequiredColumns()
+    {
+        return [
+            'id',
+            'photo',
+            'name',
+            'category_id',
+            'description',
+            'price',
+            'brand_id',
+            'ages',
+            'specification',
+            'english_name',
+            'precautions',
+            'instructions',
+            'ingredients',
+            'photo_url',
+            'page_url',
+        ];
     }
 
 }

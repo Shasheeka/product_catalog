@@ -20,4 +20,8 @@ Route::get('/', 'ProductController@ListProducts')->name('products');
 
 Route::get('/products', 'ProductController@ListProducts')->name('products');
 
+Route::get('/products/upload', 'ProductController@upload')->name('upload');
+
+Route::post('/products/upload', 'ProductController@store')->name('store');
+
 Route::resource('/product-request', 'ProductRequestController');

@@ -3,9 +3,6 @@
 @push('pagetitle')
 
 @section('content')
-    <!-- Create Task Form... -->
-
-    <!-- Current Tasks -->
     @if (count($products) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -28,12 +25,10 @@
                     <th>Instructions</th>
                     </thead>
 
-                    <!-- Table Body -->
                     <tbody>
                     @foreach ($products as $product)
 
                         <tr>
-                            <!-- Task Name -->
                             <td class="table-text">
                                 <div><img height="70" width="70" src="{{  $product->photo_url }}" />
                                 </div>
