@@ -54,7 +54,7 @@ class ProductController extends Controller
                 $product = Product::where('name', $row['product_name'])->first();
 
                 if ($row['product_name'] && !$product) {
-                    $count++;
+
                     if ($row['product_category']) {
                         $category = Category::where('name', $row['product_category'])->first();
 
