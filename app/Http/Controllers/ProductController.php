@@ -15,7 +15,11 @@ class ProductController extends Controller
 {
     public function ListProducts()
     {
-        $products = Product::orderBy('created_at', 'asc')->get();
+
+        $deletedCat = Category::where('name','=','Delected')->first();
+        $products = Product::where('category_id','!=',$deletedCat->id)
+        ->orderBy('created_at', 'asc')->paginate(15);;
+
 
         return view('product.index', ['products' => $products]);
     }

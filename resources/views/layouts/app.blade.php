@@ -43,11 +43,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                             <li><a href="{{ route('products') }}">Home</a></li>
-                            <li><a href="{{ route('products') }}">Agent</a></li>
+                            <li><a href="#4">Agent</a></li>
                             <li><a href="/product-request/create">Product Request</a></li>
-                            <li><a href="{{ route('products') }}">Info</a></li>
-                            <li><a href="{{ route('products') }}">About</a></li>
-                            <li><a href="{{ route('products') }}">Multimedia</a></li>
+                            <li><a href="#4">Info</a></li>
+                            <li><a href="#4">About</a></li>
+                            <li><a href="#4">Multimedia</a></li>
 
                     </ul>
                 </div>
