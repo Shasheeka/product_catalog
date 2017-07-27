@@ -15,11 +15,15 @@ class ProductController extends Controller
 {
     public function ListProducts()
     {
-
+        $products=[];
         $deletedCat = Category::where('name','=','Delected')->first();
-        $products = Product::where('category_id','!=',$deletedCat->id)
-        ->orderBy('created_at', 'asc')->paginate(15);;
-
+        if($deletedCat){
+            $products = Product::where('category_id','!=',$deletedCat->id)
+                ->orderBy('created_at', 'asc')->paginate(15);
+        }else {
+            $products = Product::
+                orderBy('created_at', 'asc')->paginate(15);
+        }
 
         return view('product.index', ['products' => $products]);
     }

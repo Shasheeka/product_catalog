@@ -4,12 +4,18 @@
 
 @section('content')
     @if (count($products) > 0)
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Products
+        <div class="panel panel-default" style="margin-top: 70px">
+
+            <div class="panel-heading " >
+                <div class="row">
+                    <div class="col-lg-12 text-center section-head">
+                        <h2> Products</h2>
+                        <hr class="star-primary">
+                    </div>
+                </div>
             </div>
             <div class="panel-body">
-                <table class="table table-striped task-table">
+                <table class="table table-bordered table-invers">
 
                     <!-- Table Headings -->
                     <thead>
