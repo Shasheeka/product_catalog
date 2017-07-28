@@ -5,7 +5,9 @@
 @section('content')
 
     <div class="row">
+
         <div class="col-md-8 col-md-offset-2">
+
             <div class="flash-message">
                 @foreach (['danger', 'warning', 'success', 'info'] as $msg)
                     @if(Session::has('alert-' . $msg))
@@ -15,8 +17,26 @@
                 @endforeach
             </div> <!-- end .flash-message -->
             <div class="panel panel-default">
-                <div class="panel-heading ">Upload  Product</div>
+                <div class="panel-heading "   style="margin-top: 70px">
+                    <div class="row">
+                        <div class="col-lg-12 text-center section-head">
+                            <h2> Products upload</h2>
+                            <hr class="star-primary">
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="panel-body">
+
+                    <div class="flash-message">
+                        @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+                            @if(Session::has('alert-' . $msg))
+
+                                <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+                            @endif
+                        @endforeach
+                    </div> <!-- end .flash-message -->
                     <form class="form-horizontal" method="POST" action="/products/upload" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('excelFile') ? ' has-error' : '' }}">
