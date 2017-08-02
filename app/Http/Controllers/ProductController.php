@@ -19,10 +19,10 @@ class ProductController extends Controller
         $deletedCat = Category::where('name','=','Delected')->first();
         if($deletedCat){
             $products = Product::where('category_id','!=',$deletedCat->id)
-                ->orderBy('created_at', 'asc')->paginate(100);
+                ->orderBy('created_at', 'asc')->paginate(10);
         }else {
             $products = Product::
-                orderBy('created_at', 'asc')->paginate(100);
+                orderBy('created_at', 'asc')->paginate(10);
         }
 
         return view('product.index', ['products' => $products]);

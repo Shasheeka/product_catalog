@@ -49,11 +49,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                             <li><a href="{{ route('products') }}">Home</a></li>
-                            <li><a href="#4">Agent</a></li>
+                            <li><a href="/agent">Agent</a></li>
                             <li><a href="/product-request/create">Product Request</a></li>
-                            <li><a href="#4">Info</a></li>
-                            <li><a href="#4">About</a></li>
-                            <li><a href="#4">Multimedia</a></li>
+                            <li><a href="/info">Info</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/multimedia">Multimedia</a></li>
 
                     </ul>
                 </div>
@@ -61,12 +61,30 @@
         </nav>
 
         @yield('content')
+
+    <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; Your Website 2016
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/freelancer.js') }}"></script>
-    <script src="{{ asset('js/jqBootstrapValidation.js') }}"></script>
-    <script src="{{ asset('js/contact_me.js') }}"></script>
+    {{--<script src="{{ asset('js/jqBootstrapValidation.js') }}"></script>--}}
+    {{--<script src="{{ asset('js/contact_me.js') }}"></script>--}}
 </body>
 </html>
