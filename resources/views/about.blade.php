@@ -9,7 +9,7 @@
                 <div class="col-lg-12">
                     <img class="img-responsive" src="img/temp.png" alt="">
                     <div class="intro-text">
-                        <h1 class="name">Agent</h1>
+                        <h1 class="name">About</h1>
                         <hr class="star-light">
                         <span class="skills">Page is Under Constructions </span>
                     </div>
