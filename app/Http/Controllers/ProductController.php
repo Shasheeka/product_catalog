@@ -28,6 +28,15 @@ class ProductController extends Controller
         return view('product.index', ['products' => $products]);
     }
 
+    public function ListProductsByCat($id)
+    {
+        $products=[];
+        $products = Product::where('category_id', $id)
+            ->orderBy('created_at', 'asc')->paginate(10);
+
+        return view('product.index', ['products' => $products]);
+    }
+
     public function upload()
     {
         //echo phpinfo();
@@ -119,6 +128,11 @@ class ProductController extends Controller
         }
 
         //return redirect()->route("products/upload");
+
+
+    }
+
+    public function createSingleProduct(Request $request){
 
 
     }

@@ -42,13 +42,13 @@ hr.star-primary {
 }
 hr.star-light:after,
 hr.star-primary:after {
-  content: "\f005";
-  font-family: FontAwesome;
-  display: inline-block;
-  position: relative;
-  top: -0.8em;
-  font-size: 2em;
-  padding: 0 0.25em;
+  content: "\f005" !important;
+  font-family: FontAwesome !important;
+  display: inline-block !important;
+  position: relative !important;
+  top: -0.8em !important;
+  font-size: 2em !important;
+  padding: 0 0.25em !important;
 }
 hr.star-light {
   border-color: white;
@@ -518,4 +518,14 @@ fieldset[disabled] .btn-success.active {
 }
 div#maincontent {
   outline: none;
+}
+
+.cat-name {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
