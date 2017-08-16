@@ -34,7 +34,7 @@
                 <div class="col-sm-4 col-md-3 portfolio-item">
                     <a href="{{ URL('/products/category/'.$category->id )}}" class="portfolio-link" >
 
-                        <img src="img/portfolio/category1.png" class="img-responsive" alt="Slice of cake">
+                        <img src="{{'img/portfolio/category'.$category->id.'.png'}}" class="img-responsive" alt="Slice of cake">
                     </a>
                     <div class="cat-name" >
                         {{$category->name}}
