@@ -47,7 +47,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                             <li><a href="/">Home</a></li>
-                            <li><a href="/agent">Agent</a></li>
+                            {{--<li><a href="/agent">Agent</a></li>--}}
                             <li><a href="/product-request/create">Product Request</a></li>
                             <li><a href="/info">Info</a></li>
                             <li><a href="/about">About</a></li>
