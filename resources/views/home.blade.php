@@ -33,7 +33,7 @@
                         <img src="img/portfolio/category1.png" class="img-responsive" alt="Slice of cake">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Joey "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Joey "</div></div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-3 portfolio-item">
@@ -42,7 +42,7 @@
                         <img src="img/portfolio/category2.png" class="img-responsive" alt="Circus tent">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Platypus "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">" Platypus "</div></div>
 
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                         <img src="img/portfolio/category3.png" class="img-responsive" alt="Game controller">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Koala"</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">" Koala"</div></div>
 
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-3 portfolio-item">
@@ -63,7 +63,7 @@
                         <img src="img/portfolio/category4.png" class="img-responsive" alt="Safe">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>"Brown Snake"</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">"Brown Snake"</div></div>
 
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <img src="img/portfolio/category5.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p> <p>" Possum "</p></p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Possum "</div></div>
 
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         <img src="img/portfolio/category6.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Tasmanian Devil "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Tasmanian Devil "</div></div>
 
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         <img src="img/portfolio/category7.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name">  <p>" Wombat "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">  " Wombat "</div></div>
 
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                         <img src="img/portfolio/category8.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Bilby "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Bilby "</div></div>
 
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         <img src="img/portfolio/category9.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Kookaburra "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Kookaburra "</div></div>
 
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         <img src="img/portfolio/category10.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Kangaroo "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Kangaroo "</div></div>
 
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         <img src="img/portfolio/category11.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Echidna "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">" Echidna "</div></div>
 
                     </div>
 
@@ -144,7 +144,7 @@
                         <img src="img/portfolio/category12.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Crocadile "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Crocadile "</div></div>
 
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                         <img src="img/portfolio/category13.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Goanna "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">" Goanna "</div></div>
 
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                         <img src="img/portfolio/category14.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Emu "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Emu "</div></div>
 
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                         <img src="img/portfolio/category15.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Dingo "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">" Dingo "</div></div>
 
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                         <img src="img/portfolio/category16.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Flying Fox "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Flying Fox "</div></div>
 
                     </div>
                 </div>
@@ -194,7 +194,7 @@
                         <img src="img/portfolio/category17.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Kiwi Bird "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Kiwi Bird "</div></div>
 
                     </div>
                 </div>
@@ -204,7 +204,7 @@
                         <img src="img/portfolio/category18.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Fur Seal "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Fur Seal "</div></div>
 
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                         <img src="img/portfolio/category19.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Yellow Eyed Penguin "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> " Yellow Eyed Penguin "</div></div>
 
                     </div>
                 </div>
@@ -224,7 +224,7 @@
                         <img src="img/portfolio/category20.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Ram "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name">" Ram "</div></div>
                     </div>
                 </div>
 
