@@ -19,10 +19,10 @@ class ProductController extends Controller
         $deletedCat = Category::where('name','=','Delected')->first();
         if($deletedCat){
             $products = Product::where('category_id','!=',$deletedCat->id)
-                ->orderBy('created_at', 'asc')->paginate(10);
+                ->orderBy('created_at', 'asc')->paginate(120);
         }else {
             $products = Product::
-                orderBy('created_at', 'asc')->paginate(10);
+                orderBy('created_at', 'asc')->paginate(120);
         }
 
         return view('product.index', ['products' => $products]);
@@ -32,7 +32,7 @@ class ProductController extends Controller
     {
         $products=[];
         $products = Product::where('category_id', $id)
-            ->orderBy('created_at', 'asc')->paginate(10);
+            ->orderBy('created_at', 'asc')->paginate(120);
 
         return view('product.index', ['products' => $products]);
     }
