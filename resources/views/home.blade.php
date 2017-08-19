@@ -194,7 +194,7 @@
                         <img src="img/portfolio/category17.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Name "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Kiwi Bird "</p></div></div>
 
                     </div>
                 </div>
@@ -204,7 +204,7 @@
                         <img src="img/portfolio/category18.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Name "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Fur Seal "</p></div></div>
 
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                         <img src="img/portfolio/category19.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Name "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"> <p>" Yellow Eyed Penguin "</p></div></div>
 
                     </div>
                 </div>
@@ -224,7 +224,7 @@
                         <img src="img/portfolio/category20.png" class="img-responsive" alt="Submarine">
                     </a>
                     <div class="caption">
-                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Name "</p></div></div>
+                        <div><div class="cat-name">Product Category</div> <div class="animal-name"><p>" Ram "</p></div></div>
                     </div>
                 </div>
 
