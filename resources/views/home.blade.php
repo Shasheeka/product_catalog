@@ -11,7 +11,7 @@
                         <img class="img-responsive" src="img/profile.png" alt="">
                         <h1 class="name">Daigou Australia Group</h1>
                         <hr class="star-light">
-                        <span class="skills">Lorem ipsum - nullam aliquam - Lorem ipsum</span>
+                        <span class="skills">Insert Company Slogan</span>
                     </div>
                 </div>
             </div>
@@ -29,17 +29,17 @@
             </div>
             <div class="row">
 
-                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/1" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category1.png" alt="Slice of cake" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name"> " Joey "</div></div></div></div>
+                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/9" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category1.png" alt="Slice of cake" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name"> " Joey "</div></div></div></div>
 
-                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/2" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category2.png" alt="Circus tent" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Platypus "</div></div></div></div>
+                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/10" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category2.png" alt="Circus tent" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Platypus "</div></div></div></div>
 
-                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/3" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category3.png" alt="Game controller" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Koala"</div></div></div></div>
+                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/3" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category3.png" alt="Game controller" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Koala "</div></div></div></div>
 
-                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/20" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category20.png" alt="Submarine" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Fur Seal </div></div></div></div>
+                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/20" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category20.png" alt="Submarine" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Fur Seal "</div></div></div></div>
 
                 <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/17" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category17.png" alt="Submarine" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name"> " Kiwi Bird "</div></div></div></div>
 
-                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/4" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category4.png" alt="Safe" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">"Brown Snake"</div></div></div></div>
+                <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/4" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category4.png" alt="Safe" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name">" Brown Snake "</div></div></div></div>
 
                 <div class="col-sm-4 col-md-3 portfolio-item"><a href="/products/category/8" data-toggle="modal" class="portfolio-link"><img src="img/portfolio/category8.png" alt="Submarine" class="img-responsive"></a> <div class="caption"><div><div class="cat-name">Product Category</div> <div class="animal-name"> " Bilby "</div></div></div></div>
 

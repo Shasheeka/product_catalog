@@ -36,7 +36,7 @@
 
                         <tr>
                             <td class="table-text">
-                                <div><img height="300" width="300" src="{{  $product->photo_url }}" />
+                                <div><img height="260" width="260" src="{{  $product->photo_url }}" />
                                 </div>
                             </td>
 
