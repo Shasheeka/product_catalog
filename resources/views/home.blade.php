@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-
     <header>
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
@@ -11,7 +9,7 @@
                         <img class="img-responsive" src="img/imgpsh_fullsize1.png" alt="">
                         <h1 class="name">Daigou Australia Group</h1>
                         <hr class="star-light">
-                        <span class="skills">明智之选   健康之选</span>
+                        <span class="skills">"明智之选   健康之选"</span>
                     </div>
                 </div>
             </div>
@@ -19,6 +17,8 @@
     </header>
 
 
+
+    <div class="container">
     <section id="Categories">
         <div class="mcontainer">
             <div class="row">
