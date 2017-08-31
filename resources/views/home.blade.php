@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-text">
-                        <img class="img-responsive" src="img/profile.png" alt="">
+                        <img class="img-responsive" src="img/imgpsh_fullsize.png" alt="">
                         <h1 class="name">Daigou Australia Group</h1>
                         <hr class="star-light">
                         <span class="skills">Insert Company Slogan</span>
