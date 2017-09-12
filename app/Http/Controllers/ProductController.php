@@ -59,32 +59,38 @@ class ProductController extends Controller
             });
 
             $columns = Product::getRequiredColumns();
+//            dd($rowSheet);
+//            $rows = $rowSheet[0];
+//            dd($rows);
+            foreach ($rowSheet as $key => $row) {
 
-            $rows = $rowSheet[0];
-            foreach ($rows as $key => $row) {
                 $cat_id = null;
                 $brand_id = null;
+                $num = 0;
 
-                $variable_new = str_replace('￥', '', $row['product_customer_price']);
-                $num = (float)preg_replace('/[^\d]/', '', $variable_new);
+                if(isset($row['product_price']) && $row['product_price'] != ''){
+                    $variable_new = str_replace('￥', '', $row['product_price']);
+                    $variable_new = str_replace('$', '', $row['product_price']);
+                    $num = (float)$variable_new;
+                }
 
                 $product = Product::where('name', $row['product_name'])->first();
 
                 if ($row['product_name'] && !$product) {
 
-                    if ($row['product_category']) {
-                        $category = Category::where('name', $row['product_category'])->first();
+                    if ($row['category']) {
+                        $category = Category::where('name', $row['category'])->first();
 
                         if (!$category) {
                             $newCat = Category::create([
-                                'name' => $row['product_category'],
+                                'name' => $row['category'],
                             ]);
                             $cat_id = $newCat->id;
                         } else {
                             $cat_id = $category->id;
                         }
                     }
-                    if ($row['country_brand']) {
+                    if (isset($row['country_brand'])) {
                         $brand = Brand::where('name', $row['country_brand'])->first();
 
                         if (!$brand) {
@@ -106,13 +112,13 @@ class ProductController extends Controller
                         'description' => $row['product_description'],
                         'price' => $num,
                         'brand_id' => $brand_id,
-                        'ages' => $row['for_ages'],
-                        'specification' => $row['specifications'],
-                        'english_name' => $row['product_english_name'],
+                        'ages' => $row['for_age'],
+                        'specification' => $row['specification'],
+                        'english_name' => (isset($row['product_english_name'])) ? $row['product_english_name']: '',
                         'precautions' => $row['precautions'],
                         'instructions' => $row['instructions'],
                         'ingredients' => $row['ingredients'],
-                        'photo_url' => $row['product_photo_url'],
+                        'photo_url' => $row['product_photo1'],
                         'page_url' => $row['pageurl'],
                     ]);
 

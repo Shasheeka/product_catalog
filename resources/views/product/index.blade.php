@@ -36,7 +36,7 @@
 
                         <tr>
                             <td class="table-text">
-                                <div><img height="260" width="260" src="{{  $product->photo_url }}" />
+                                <div><img height="260" width="260" src="{{'/images/'.$product->photo }}" />
                                 </div>
                             </td>
 
@@ -49,7 +49,7 @@
                             </td>
 
                             <td class="table-text">
-                                <div> &yen;{{ $product->price }}</div>
+                                <div> ${{ $product->price }}</div>
                             </td>
                             <td class="table-text">
                                 <div>{{ $product->ages }}</div>
