@@ -59,11 +59,9 @@ class ProductController extends Controller
             });
 
             $columns = Product::getRequiredColumns();
-//            dd($rowSheet);
-//            $rows = $rowSheet[0];
-//            dd($rows);
-            foreach ($rowSheet as $key => $row) {
+            $rows = $rowSheet[0];
 
+            foreach ($rows as $key => $row) {
                 $cat_id = null;
                 $brand_id = null;
                 $num = 0;
@@ -112,13 +110,13 @@ class ProductController extends Controller
                         'description' => $row['product_description'],
                         'price' => $num,
                         'brand_id' => $brand_id,
-                        'ages' => $row['for_age'],
+                        'ages' => (isset($row['for_age'])) ? $row['for_age']: '',
                         'specification' => $row['specification'],
                         'english_name' => (isset($row['product_english_name'])) ? $row['product_english_name']: '',
-                        'precautions' => $row['precautions'],
+                        'precautions' => $row['precautions_and_warnings'],
                         'instructions' => $row['instructions'],
                         'ingredients' => $row['ingredients'],
-                        'photo_url' => $row['product_photo1'],
+                        'photo_url' => $row['product_photo_1'],
                         'page_url' => $row['pageurl'],
                     ]);
 

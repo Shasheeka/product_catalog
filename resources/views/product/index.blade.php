@@ -49,7 +49,7 @@
                             </td>
 
                             <td class="table-text">
-                                <div> ${{ $product->price }}</div>
+                                <div> ￥{{ $product->price }}</div>
                             </td>
                             <td class="table-text">
                                 <div>{{ $product->ages }}</div>
