@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Brand;
 use App\Category;
 use App\Product;
+use App\SubCategory;
 use App\ProductRequest;
 use Illuminate\Http\Request;
 use Excel;
@@ -51,14 +52,105 @@ class ProductController extends Controller
             ]);
             $path = $request->file('excelFile')->store('excel');
 
-            $rowSheet = null;
-            Excel::load('storage/app/' . $path, function ($reader) use (&$rowSheet) {
-                $rowSheet = $reader->toArray();
+            $readerSheet = null;
+            Excel::load('storage/app/' . $path, function ($reader) use (&$readerSheet) {
+
+
+                $readerSheet = $reader->all();
 
                 return false;
             });
 
-            $columns = Product::getRequiredColumns();
+
+            $readerSheet->each(function($sheet) {
+
+                if($sheet->getTitle() != 'All Products' && $sheet->getTitle() != 'Categories' && $sheet->getTitle() != 'OLD') {
+                    var_dump($sheet->getTitle());
+
+
+                  // Loop through all rows
+                    $cat_id   = 1;
+                    $category = Category::where('name', $sheet->getTitle())->first();
+
+                    if (!$category) {
+                        $newCat = Category::create([
+                            'name' => $sheet->getTitle(),
+                        ]);
+                        $cat_id = $newCat->id;
+                    } else {
+                        $cat_id = $category->id;
+                    }
+                    $oneSheet = $sheet->toArray();
+
+                    foreach ($oneSheet as $key => $row) {
+                        $brand_id = null;
+                        $num      = 0;
+
+                        if (isset($row['product_price']) && $row['product_price'] != '') {
+                            $variable_new = str_replace('￥', '', $row['product_price']);
+                            $variable_new = str_replace('$', '', $row['product_price']);
+                            $num          = (float)$variable_new;
+                        }
+
+                        $product = Product::where('name', $row['product_name'])->first();
+
+                        if ($row['product_name'] && !$product) {
+
+                            if ($row['category']) {
+                                $subCategory = SubCategory::where('name', $row['category'])->first();
+
+                                if (!$subCategory) {
+                                    $newSubCat  = SubCategory::create([
+                                        'name'        => $row['category'],
+                                        'category_id' => $cat_id,
+                                    ]);
+                                    $sub_cat_id = $newSubCat->id;
+                                } else {
+                                    $sub_cat_id = $subCategory->id;
+                                }
+                            }
+                            if (isset($row['country_brand'])) {
+                                $brand = Brand::where('name', $row['country_brand'])->first();
+
+                                if (!$brand) {
+                                    $newBrand = Brand::create([
+                                        'name'         => $row['country_brand'],
+                                        'english_name' => $row['brand_english_name'],
+                                    ]);
+                                    $brand_id = $newBrand->id;
+                                } else {
+                                    $brand_id = $brand->id;
+                                }
+                            }
+
+                            Product::create([
+
+                                'photo'         => $row['product_photo'],
+                                'name'          => $row['product_name'],
+                                'category_id'   => $sub_cat_id,
+                                'description'   => $row['product_description'],
+                                'price'         => $num,
+                                'brand_id'      => $brand_id,
+                                'ages'          => (isset($row['for_age'])) ? $row['for_age'] : '',
+                                'specification' => $row['specification'],
+                                'english_name'  => (isset($row['product_english_name'])) ? $row['product_english_name'] : '',
+                                'precautions'   => $row['precautions_and_warnings'],
+                                'instructions'  => $row['instructions'],
+                                'ingredients'   => $row['ingredients'],
+                                'photo_url'     => $row['product_photo_1'],
+                                'page_url'      => $row['pageurl'],
+                            ]);
+
+                        }
+                    }
+
+
+
+
+                }
+            });
+
+/*            $columns = Product::getRequiredColumns();
             $rows = $rowSheet[0];
 
             foreach ($rows as $key => $row) {
@@ -121,7 +213,7 @@ class ProductController extends Controller
                     ]);
 
                 }
-            }
+            }*/
 
             $request->session()->flash('alert-success', 'Product list  successful uploaded!');
             return view('product.upload');
