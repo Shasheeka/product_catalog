@@ -12,6 +12,11 @@ class SubCategory extends Model
 
     public function category()
     {
-        return $this->hasOne('App\Category');
+        return $this->belongs('App\Category');
+    }
+
+    public function products()
+    {
+        return $this->hasMany('App\Product');
     }
 }

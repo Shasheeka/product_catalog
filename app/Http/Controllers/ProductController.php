@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Excel;
 use Illuminate\Support\Facades\Storage;
 use Mockery\Exception;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -31,16 +32,65 @@ class ProductController extends Controller
 
     public function ListProductsByCat($id)
     {
-        $products=[];
-        $products = Product::where('category_id', $id)
-            ->orderBy('created_at', 'asc')->paginate(120);
+        $search_sub_cat = request()->sub_cat;
+        $search_product = request()->product;
 
-        return view('product.index', ['products' => $products]);
+        $products      = [];
+        $catList["0"] = "All products";
+        $category      = Category::find($id);
+        $subCategories = SubCategory::where('category_id',$id)->get();
+        $subCatIds     = $subCategories->pluck('id')->toArray();
+
+        $catList =  $catList+  $subCategories ->pluck('name', 'id')->toArray();
+
+        if($search_sub_cat == null && $search_product == null){
+
+            $products      = Product::whereIN('category_id', $subCatIds)
+                ->orderBy('created_at', 'asc')->paginate(120);
+        }else{
+
+            if(isset($search_sub_cat) && $search_sub_cat != '' && $search_product == '') {
+
+                if($search_sub_cat == '0' && $search_product == ''){
+                    $products      = Product::whereIN('category_id', $subCatIds)
+                        ->orderBy('created_at', 'asc')->paginate(120);
+
+                } else{
+                    $products      = Product::where('category_id', (int)$search_sub_cat)
+                        ->orderBy('created_at', 'asc')->paginate(120);
+                }
+
+
+            }
+
+            if($search_sub_cat != '' && $search_product != '') {
+
+                if($search_sub_cat == '0'  && $search_product != ''){
+                    $products      = Product::whereIN('category_id', $subCatIds)->where('name', 'like', '%' .$search_product . '%')
+                        ->orderBy('created_at', 'asc')->paginate(120);
+
+                } else{
+                    $products      = Product::where('category_id', (int)$search_sub_cat)->where('name', 'like', '%' .$search_product . '%')
+                        ->orderBy('created_at', 'asc')->paginate(120);
+                }
+
+
+            }
+
+        }
+
+        return view('product.index', [  'products' => $products,
+                                        'category' => $category,
+                                        'catList' => $catList,
+                                        'search_sub_cat' => $search_sub_cat,
+                                        'search_product' => $search_product,
+
+                                     ]
+                );
     }
 
     public function upload()
     {
-        //echo phpinfo();
         return view('product.upload');
     }
 

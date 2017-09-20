@@ -16,10 +16,10 @@ class Category extends Model
         'name', 'description', 'english_name',
     ];
 
-    public function products()
+/*    public function products()
     {
         return $this->hasMany('App\Product');
-    }
+    }*/
 
     public function subCategory()
     {

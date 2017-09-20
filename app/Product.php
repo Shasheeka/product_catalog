@@ -30,9 +30,9 @@ class Product extends Model
         'page_url',
     ];
 
-    public function category()
+    public function SubCategory()
     {
-        return $this->belongsTo('App\Category');
+        return $this->belongsTo('App\SubCategory', 'category_id');
     }
 
     public function brand()
