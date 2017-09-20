@@ -4,7 +4,7 @@
 
 @section('content')
     @if (count($products) > 0)
-        <div class="panel panel-default" style="margin-top: 70px">
+        <div class="panel panel-default">
 
             <div class="panel-heading " >
                 <div class="row">

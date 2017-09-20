@@ -17,7 +17,7 @@
                 @endforeach
             </div> <!-- end .flash-message -->
             <div class="panel panel-default">
-                <div class="panel-heading "   style="margin-top: 70px">
+                <div class="panel-heading "  >
                     <div class="row">
                         <div class="col-lg-12 text-center section-head">
                             <h2> Products upload</h2>

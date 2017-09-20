@@ -73,7 +73,6 @@ header {
   color: white;
 }
 header .container {
-  padding-top: 100px;
   padding-bottom: 50px;
 }
 header img {
@@ -296,16 +295,17 @@ form .row:first-child .floating-label-form-group {
 }
 footer {
   color: white;
+  margin-bottom: 0px !important;
 }
 footer h3 {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 footer .footer-above {
   padding-top: 50px;
   background-color: #0f5539;
 }
 footer .footer-col {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 footer .footer-below {
   padding: 25px 0;
@@ -537,4 +537,13 @@ div#maincontent {
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+  position: relative !important;
+}
+
+.navbar {
+  position: relative;
+  margin-bottom: 0px;
 }
