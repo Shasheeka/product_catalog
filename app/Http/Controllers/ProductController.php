@@ -280,6 +280,103 @@ class ProductController extends Controller
 
     public function createSingleProduct(Request $request){
 
-
+        $subCategories = SubCategory::get();
+        $catList =   $subCategories ->pluck('name', 'id')->toArray();
+        return view('product.create' ,['subCat'=>$catList]);
     }
+
+    public function saveProduct(Request $request){
+
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category' => 'nullable|numeric',
+        ]);
+        $data = $request->all();
+        $name = $data['name'];
+        $price = $data['price'];
+        $description = (isset($data['description'])) ? $data['description'] : '';;
+        $category = (isset($data['category'])) ? $data['category'] : '';;
+        $specification = (isset($data['specification'])) ? $data['specification'] : '';
+        $precautions = (isset($data['precautions'])) ? $data['precautions'] : '';
+        $ingredients = (isset($data['ingredients'])) ? $data['ingredients'] : '';
+        $instructions = (isset($data['instructions'])) ? $data['instructions'] : '';
+
+        $image = (isset($data['image'])) ? file($data['image']) : '';
+        $hashname  = (isset($data['image'])) ? $data['image']->hashName(): '';
+
+
+        if(isset($data['product_id'])){
+            //edit
+
+            $product = Product::find($data['product_id']);
+
+
+             $product->name = $name;
+             $product->price = $price;
+             $product->description = $description;
+             $product->specification = $specification;
+             $product->precautions = $precautions;
+             $product->ingredients = $ingredients;
+             $product->instructions = $instructions;
+
+            if($hashname != ''){
+                Storage::disk('uploads')->put($hashname, $image);
+                $product->photo = $hashname;
+            }
+
+             $product->category_id = $category;
+
+            $product->save();
+
+            $request->session()->flash('alert-success', 'Product  is successful edited');
+            return redirect()->route("editSingleProduct", $product->id);
+
+        } else{
+            //new
+            Storage::disk('uploads')->put($hashname, $image);
+
+            Product::create([
+                'name' => $name,
+                'price' => $price,
+                'description' => $description,
+                'specification' => $specification,
+                'precautions' => $precautions,
+                'ingredients' => $ingredients,
+                'instructions' => $instructions,
+                'photo' => $hashname,
+                'category_id' => $category,
+
+
+            ]);
+
+            $request->session()->flash('alert-success', 'Product  is successful saved');
+            return redirect()->action('ProductController@createSingleProduct');
+        }
+
+
+
+
+
+        //return redirect()->route("products/create");
+        //return redirect()->route('products/create');
+
+        //$subCategories = SubCategory::get();
+        //$catList =   $subCategories ->pluck('name', 'id')->toArray();
+       // return view('product.create' ,['subCat'=>$catList, 'category'=>$category]);
+    }
+
+    public function editProduct($id){
+
+        $subCategories = SubCategory::get();
+        $catList =   $subCategories ->pluck('name', 'id')->toArray();
+
+        $product = Product::find($id);
+
+        return view('product.edit' ,['subCat'=>$catList, 'product'=>$product]);
+    }
+
+
+
 }

@@ -52,8 +52,15 @@
                             <li><a href="/info">Info</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/multimedia">Multimedia</a></li>
+                        @if(Auth::check())
                             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                        @endif
+
+                        @if(Auth::guest())
+                            <li><a href="login" >Login</a></li>
+
+                        @endif
                     </ul>
                 </div>
             </div>

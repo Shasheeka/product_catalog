@@ -14,8 +14,8 @@
                         <div class="col-md-12 ">
 
                             <form action="">
-                                <div class="col-md-3">
-                                    Select Sub Category
+                                <div class="col-md-2">
+                                    <label class="control-label">Select Sub Category</label>
                                 </div>
                                 <div class="col-md-3">
                                     <select class="form-control" name="sub_cat">
@@ -29,10 +29,22 @@
 
                                     <input name="product" class="form-control" type="text" placeholder="product name">
                                 </div>
-                                <div class="col-md-3">
-                                    <button  class="button form-control" >Search</button>
+                                <div class="col-md-2">
+                                    <button  class="btn-primary form-control " >Search</button>
                                 </div>
                             </form>
+
+                            <div class="col-md-2">
+                                @if(Auth::check())
+
+                                    <a href="{{route('createSingleProduct')}}">
+                                        <button class="btn form-control btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>Add Product</button>
+                                    </a>
+
+                                @endif
+
+
+                            </div>
 
                         </div>
                     </div>
@@ -53,6 +65,9 @@
                     <th>Precautions</th>
                     <th>Ingredients</th>
                     <th>Instructions</th>
+                    @if(Auth::check())
+                        <th>Edit / Delete</th>
+                    @endif
                     </thead>
 
                     <tbody>
@@ -92,12 +107,12 @@
                             <td class="table-text">
                                 <div>{{ $product->instructions }}</div>
                             </td>
-
-
-
-                            <td>
-                                <!-- TODO: Delete Button -->
-                            </td>
+                            @if(Auth::check())
+                                <td class="table-text">
+                                    <div class="pull-left"><a href="{{route('editSingleProduct', $product->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></div>
+                                    <div class="pull-right"><a href="{{route('editSingleProduct', $product->id)}}"><i class="fa fa-trash-o delete" aria-hidden="true"></i></a></div>
+                                </td>
+                            @endif
                         </tr>
                     @endforeach
                     </tbody>

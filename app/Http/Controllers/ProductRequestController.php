@@ -88,7 +88,7 @@ class ProductRequestController extends Controller
             'image1' => $image1,
             'image2' => $image2,
             'image3' => $image3,
-            'category_id' => 1,
+            'category_id' => $data['categories'],
         ]);
 
         $request->session()->flash('alert-success', 'Product request was successful submitted!');

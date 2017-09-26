@@ -23,7 +23,13 @@ Route::get('/products/upload', 'ProductController@upload')->name('upload');
 
 Route::post('/products/upload', 'ProductController@store')->name('store');
 
-Route::post('/products/create', 'ProductController@createSingleProduct')->name('createSingleProduct');
+Route::get('/products/create', 'ProductController@createSingleProduct')->name('createSingleProduct');
+
+Route::post('/products/save', 'ProductController@saveProduct')->name('saveProduct');
+
+
+Route::get('/products/edit/{id}', 'ProductController@editProduct')->name('editSingleProduct');
+
 
 Route::resource('/product-request', 'ProductRequestController');
 
