@@ -335,7 +335,9 @@ class ProductController extends Controller
 
         } else{
             //new
-            Storage::disk('uploads')->put($hashname, $image);
+            if($hashname != ''){
+                Storage::disk('uploads')->put($hashname, $image);
+            }
 
             Product::create([
                 'name' => $name,
