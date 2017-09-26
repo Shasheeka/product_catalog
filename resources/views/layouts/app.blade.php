@@ -58,7 +58,7 @@
                         @endif
 
                         @if(Auth::guest())
-                            <li><a href="login" >Login</a></li>
+                            <li><a href="{{ route('login') }}" >Login</a></li>
 
                         @endif
                     </ul>
@@ -79,7 +79,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            Copyright &copy; Your Website 2016
+                            Copyright &copy; Daigou Australia Group 2017
                         </div>
                     </div>
                 </div>
