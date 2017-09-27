@@ -110,7 +110,8 @@
                             @if(Auth::check())
                                 <td class="table-text">
                                     <div class="pull-left"><a href="{{route('editSingleProduct', $product->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></div>
-                                    <div class="pull-right"><a href="{{route('editSingleProduct', $product->id)}}"><i class="fa fa-trash-o delete" aria-hidden="true"></i></a></div>
+                                    <div class="pull-right"><a onclick="deleteProduct({{$product->id}})" href="#"><i class="fa fa-trash-o delete" aria-hidden="true"></i></a></div>
+                                    <form id="{{'delete-form-'.$product->id}}" action="{{ route('deleteProduct', $product->id) }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                                 </td>
                             @endif
                         </tr>
@@ -121,5 +122,14 @@
                 {{ $products->links() }}
             </div>
         </div>
+        <script>
+            function deleteProduct(id) {
+
+                var r = confirm("Are you sure to delete this product!");
+                if (r == true) {
+                    document.getElementById('delete-form-'+id).submit()
+                }
+            }
+        </script>
     @endif
 @endsection

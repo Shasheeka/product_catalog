@@ -379,6 +379,14 @@ class ProductController extends Controller
         return view('product.edit' ,['subCat'=>$catList, 'product'=>$product]);
     }
 
+    public function deleteProduct($id){
+        $product = Product::find($id);
+        if($product){
+            $product->delete();
+        }
+        return redirect()->back();
+    }
+
 
 
 }

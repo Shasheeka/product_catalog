@@ -30,6 +30,8 @@ Route::post('/products/save', 'ProductController@saveProduct')->name('saveProduc
 
 Route::get('/products/edit/{id}', 'ProductController@editProduct')->name('editSingleProduct');
 
+Route::post('/deleteProduct/{id}', 'ProductController@deleteProduct')->name('deleteProduct');
+
 
 Route::resource('/product-request', 'ProductRequestController');
 
