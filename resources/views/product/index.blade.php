@@ -131,5 +131,15 @@
                 }
             }
         </script>
+    @else
+        <div class="panel-heading " >
+            <div class="row">
+                <div class="col-lg-12 text-center section-head">
+                    <h2> No Products Available </h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+
     @endif
 @endsection
