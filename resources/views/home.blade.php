@@ -56,7 +56,7 @@
                                     src="img/portfolio/category3.png" alt="Game controller" class="img-responsive"></a>
                         <div class="caption">
                             <div>
-                                <div class="cat-name">Beauty and Cosmetics</div>
+                                <div class="cat-name">Beauty & Cosmetics</div>
                                 <div class="animal-name">" Koala "</div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                     src="img/portfolio/category5.png" alt="Submarine" class="img-responsive"></a>
                         <div class="caption">
                             <div>
-                                <div class="cat-name">Confectionery and Honey</div>
+                                <div class="cat-name">Confectionery & Honey</div>
                                 <div class="animal-name"> " Possum "</div>
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                                     src="img/portfolio/category13.png" alt="Submarine" class="img-responsive"></a>
                         <div class="caption">
                             <div>
-                                <div class="cat-name">Weight Loss and Quit Smoking</div>
+                                <div class="cat-name">Weight Loss & Quit Smoking</div>
                                 <div class="animal-name">" Goanna "</div>
                             </div>
                         </div>
