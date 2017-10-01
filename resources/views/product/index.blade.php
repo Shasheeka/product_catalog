@@ -51,8 +51,8 @@
                 </div>
             </div>
 
-            <div class="panel-body">
-                <table class="table table-bordered table-invers">
+            <div class="panel-body table-responsive">
+                <table class="table table-bordered table-invers table-condensed">
 
                     <!-- Table Headings -->
                     <thead>
