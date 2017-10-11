@@ -567,9 +567,13 @@ div#maincontent {
 
   }
   .table td.text {
-    max-width: 200px;
+    max-width: 150px;
   }
-  .table td.text div {
+
+  .table td.description {
+    max-width: 300px;
+  }
+  .table td div {
     white-space: pre-wrap;
     overflow: hidden;
     overflow-wrap: break-word;

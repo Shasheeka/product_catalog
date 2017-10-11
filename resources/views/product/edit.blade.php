@@ -154,13 +154,7 @@
                             <input style="display: none" id="product_id" type="text" class="form-control" name="product_id" value="{{ $product->id  }}"  autofocus>
 
 
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Save
-                                    </button>
-                                </div>
-                            </div>
+
                             </div>
                             <div class="col-md-4">
 
@@ -177,6 +171,14 @@
                                     </div>
                                 </div>
 
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        Save
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>

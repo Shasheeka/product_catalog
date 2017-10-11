@@ -90,7 +90,7 @@
                             <td class="table-text price">
                                 <div> ￥{{ $product->price }}</div>
                             </td>
-                            <td class="table-text text" >
+                            <td class="table-text description" >
                                 <div>{{ $product->description }}</div>
                             </td>
                             <td class="table-text text">
