@@ -553,3 +553,34 @@ div#maincontent {
   font-weight: 700;
   font-size: 13px;
 }
+
+.prd-img {
+  width: 260px;
+  height: 260px;
+
+}
+
+@media only screen and (max-width: 420px) {
+  .prd-img {
+    width: 100px;
+    height: 100px;
+
+  }
+  .table td.text {
+    max-width: 200px;
+  }
+  .table td.text div {
+    white-space: pre-wrap;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+}
+
+
+
+/*
+*/

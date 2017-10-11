@@ -19,42 +19,30 @@
 </head>
 <body>
     <div id="app">
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <nav  class="navbar navbar-default navbar-fixed-top  navbar-custom">
             <div class="container">
-{{--
                 <div class="navbar-header">
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/products') }}">
-                        <h1 class="name">Daigou Australia Group</h1>
-                    </a>
-                </div>
---}}
-
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/">Daigou Australia Group</a>
                 </div>
+                <div id="navbar" class="navbar-collapse collapse">
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                            <li><a href="/">Home</a></li>
-                            {{--<li><a href="/agent">Agent</a></li>--}}
-                            <li><a href="/product-request/create">Product Request</a></li>
-                            <li><a href="/info">Info</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/multimedia">Multimedia</a></li>
+                        <li><a href="/">Home</a></li>
+                        {{--<li><a href="/agent">Agent</a></li>--}}
+                        <li><a href="/product-request/create">Product Request</a></li>
+                        <li><a href="/info">Info</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/multimedia">Multimedia</a></li>
                         @if(Auth::check())
                             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
-                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                         @endif
 
                         @if(Auth::guest())
@@ -62,7 +50,7 @@
 
                         @endif
                     </ul>
-                </div>
+                </div><!--/.nav-collapse -->
             </div>
         </nav>
 

@@ -52,7 +52,7 @@
             </div>
 
             <div class="panel-body table-responsive">
-                <table class="table table-bordered table-invers table-condensed">
+                <table class="table table-bordered table-responsive">
 
                     <!-- Table Headings -->
                     <thead>
@@ -75,40 +75,40 @@
 
                         <tr>
                             <td class="table-text">
-                                <div><img height="260" width="260" src="{{'/images/'.$product->photo }}" />
+                                <div><img class="prd-img" src="{{'/images/'.$product->photo }}" />
                                 </div>
                             </td>
 
-                            <td class="table-text">
+                            <td class="table-text text">
                                 <div>{{ $product->name }}</div>
                                 <div>{{ $product->english_name }}</div>
                             </td>
-                            <td class="table-text">
+                            <td class="table-text text">
                                 <div>{{ $catList[$product->category_id]}}</div>
                             </td>
 
-                            <td class="table-text">
+                            <td class="table-text price">
                                 <div> ￥{{ $product->price }}</div>
                             </td>
-                            <td class="table-text">
+                            <td class="table-text text" >
                                 <div>{{ $product->description }}</div>
                             </td>
-                            <td class="table-text">
+                            <td class="table-text text">
                                 <div>{{ $product->specification }}</div>
                             </td>
-                            <td class="table-text">
+                            <td class="table-text text">
                                 <div>{{ $product->precautions }}</div>
                             </td>
 
-                            <td class="table-text">
+                            <td class="table-text text">
                                 <div>{{ $product->ingredients }}</div>
                             </td>
 
-                            <td class="table-text">
+                            <td class="table-text text">
                                 <div>{{ $product->instructions }}</div>
                             </td>
                             @if(Auth::check())
-                                <td class="table-text">
+                                <td class="table-text text">
                                     <div class="pull-left"><a href="{{route('editSingleProduct', $product->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></div>
                                     <div class="pull-right"><a onclick="deleteProduct({{$product->id}})" href="#"><i class="fa fa-trash-o delete" aria-hidden="true"></i></a></div>
                                     <form id="{{'delete-form-'.$product->id}}" action="{{ route('deleteProduct', $product->id) }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
